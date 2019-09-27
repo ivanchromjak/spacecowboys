@@ -1,0 +1,57 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.idea
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Folders to ignore
+.hg
+.svn
+.CVS
+intermediate
+.idea
+cache
+
+# PressApps
+node_modules
+nbproject
+sftpCache.json
+.ftppass
+public/js
+public/css
+admin/js
+admin/css
+
+# Composer
+includes/composer
+includes/autoload.php
+includes/skelet
+composer.lock
+composer.phar
