@@ -5,13 +5,9 @@
 
   <?php get_template_part('templates/header'); ?>
   
-  <div class="uk-container uk-margin-large" role="document">
-    <div data-uk-grid class="uk-grid-large">
-      <div class="main" role="main">
-        <?php include roots_template_path(); ?>
-      </div><!-- /.main -->
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
+  <div class="main" role="main">
+    <?php include roots_template_path(); ?>
+  </div><!-- /.main -->
 
   <?php get_template_part('templates/mobile'); ?>
 

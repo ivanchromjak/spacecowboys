@@ -1,6 +1,7 @@
 // Global variables
 $global-primary-background:                     #ffdc08;
 $global-secondary-background:                   #161b20;
+$global-muted-background:                       #dfdfe1;
 // $global-success-background:                     #32d296;
 // $global-warning-background:                     #faa05a;
 // $global-danger-background:                      #D95B72;
@@ -10,11 +11,16 @@ $global-font-family:                            'Merriweather', serif;
 // $global-small-font-size:                        0.875rem;
 // $global-muted-color:                            #A9AAAB;
 // $global-xxlarge-font-size:                      2.625rem;
-// $global-xlarge-font-size:                       2rem;
+// $global-xlarge-font-size:                       2.25rem;
 // $global-large-font-size:                        1.5rem;
 // $global-medium-font-size:                       1.25rem;
-// $xsmall-font-size:                              0.875rem;
-$global-gutter:                                 30px;                               
+$xsmall-font-size:                              0.875rem;
+$global-gutter:                                 30px; 
+// $global-small-gutter:                           15px;
+// $grid-small-gutter-horizontal !default;
+$grid-gutter-horizontal-l:                       $global-gutter;
+// $grid-gutter-vertical-l:                         $global-gutter;
+
 // Base variables
 $base-heading-font-family:                      'Montserrat', san-serif;
 $base-heading-font-weight:                      700;
@@ -37,10 +43,28 @@ $base-body-font-weight:                         300;
 // $link-text-hover-color:                         #555;
 // $overlay-primary-background:                    rgba(34,34,34,0.8);
 
+// $base-h1-font-size-m:                            $global-xxlarge-font-size !default;
+// $base-h1-font-size:                              $base-h1-font-size-m * 0.85 !default;
+// $base-h1-line-height:                            1.2 !default;
+$base-h2-font-size-m:                          2.25rem;
+$base-h2-font-size:                            1.5rem;
+// $base-h2-line-height:                            1.3 !default;
+// $base-h3-font-size:                              $global-large-font-size !default;
+// $base-h3-line-height:                            1.4 !default;
+// $base-h4-font-size:                              $global-medium-font-size !default;
+// $base-h4-line-height:                            1.4 !default;
+// $base-h5-font-size:                              $global-font-size !default;
+// $base-h5-line-height:                            1.4 !default;
+// $base-h6-font-size:                              $global-small-font-size !default;
+// $base-h6-line-height:                            1.4 !default;
+
 $button-warning-color:                          #161b20;
+
+$card-default-background:                       #fdfdff;
 
 $container-padding-horizontal:                  $global-gutter;
 $container-max-width:                           1170px;
+$container-xsmall-max-width:                    650px;
 
 // $heading-medium-font-size:                       $heading-medium-font-size-m * 0.825 !default;     // 40px 0.714
 // $heading-medium-font-size-m:                     $heading-medium-font-size-l * 0.875 !default;    // 3.5rem / 56px 
@@ -53,7 +77,7 @@ $margin-xlarge-margin-l:                        110px;
 
 $navbar-nav-item-height:                        90px;
 $navbar-nav-item-padding-horizontal:            20px;
-$navbar-nav-item-font-size:                     .875rem;
+$navbar-nav-item-font-size:                     $xsmall-font-size;
 $navbar-nav-item-font-family:                   $base-heading-font-family;
 // $navbar-nav-item-hover-color:                    $global-color !default;
 // $navbar-nav-item-onclick-color:                  $global-emphasis-color !default;
@@ -70,6 +94,8 @@ $inverse-navbar-nav-item-active-color:          $global-primary-background;
 $inverse-navbar-toggle-color:                   rgb(253, 253, 255);;
 $inverse-navbar-toggle-hover-color:             rgb(253, 253, 255);;
 
+$section-padding-vertical:                      40px;
+$section-padding-vertical-m:                    60px;
 $section-large-padding-vertical:                100px;
 $section-large-padding-vertical-m:              145px;
 
