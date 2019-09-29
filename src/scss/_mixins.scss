@@ -1,0 +1,96 @@
+
+@mixin hook-base-body(){
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin hook-button-misc(){
+  .uk-button-warning {
+    font-size: .75rem;
+    font-family: $base-heading-font-family;
+    font-weight: $base-heading-font-weight;
+    color: $button-warning-color;
+    line-height: 40px;
+    border-radius: 3px;
+    background-image: -moz-linear-gradient( 90deg, #ffd306 0%, #ffe70b 100%);
+    background-image: -webkit-linear-gradient( 90deg, #ffd306 0%, #ffe70b 100%);
+    background-image: -ms-linear-gradient( 90deg, #ffd306 0%, #ffe70b 100%);
+    background-color: $global-primary-background;
+    min-width: 180px;
+    &:hover {
+      background: $button-warning-color;
+    }
+  }
+  .uk-light .uk-button-warning {
+    color: $button-warning-color;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    .uk-button-warning {
+      font-size: 1.125rem;
+      line-height: 60px;
+      min-width: 270px;
+    }
+  } 
+}
+
+@mixin hook-heading-small(){
+    text-transform: uppercase;
+}
+
+@mixin hook-heading-misc(){
+  @media (max-width: $breakpoint-medium) {
+    .uk-heading-small {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@mixin hook-modal-close-full(){
+  top: 0;
+  right: 0;
+  svg {
+    vertical-align: baseline;
+  }
+}
+
+@mixin hook-navbar(){
+  font-weight: $base-heading-font-weight;
+}
+
+@mixin hook-navbar-toggle(){
+  font-size: .75rem;
+  text-transform: uppercase;
+  span {
+    padding: 5px 9px;
+    border: solid 1px #fff;
+    border-radius: 3px;
+  }
+}
+
+@mixin hook-nav-primary(){
+  font-family: $base-heading-font-family;
+  font-weight: $base-heading-font-weight;
+  text-transform: uppercase;
+  li>a {
+    padding: 0;
+  }
+}
+
+@mixin hook-text-lead(){
+  font-weight: $base-heading-font-weight;
+  font-family: $base-heading-font-family;
+  text-transform: uppercase;
+}
+
+@mixin hook-text-misc(){
+  @media (min-width: $breakpoint-medium) {
+    .uk-text-lead {
+      font-size: $text-lead-font-size-m;
+    }
+  }
+}
+

@@ -1,56 +1,38 @@
-<?php global $processpress; ?>
 <div id="mobile" class="uk-modal-full menu-modal" data-uk-modal>
-
-    <div class="uk-modal-dialog uk-background-primary uk-light">
-        <button class="uk-modal-close-full uk-close-large uk-background-primary" type="button" data-uk-close></button>
-
-        <div data-uk-height-viewport>
-
-          <div class="uk-container uk-container-small">
-
-            <?php
-              if (has_nav_menu('mobile_navigation')) :
-                wp_nav_menu(array('theme_location' => 'mobile_navigation', 'menu_class' => 'uk-nav-primary uk-nav-center first', 'depth' => 1));
-              endif;
-            ?>
-
-            <?php if ($processpress['nav_user_menu'] == 1) { ?>
-              <ul class="uk-nav-primary uk-nav-center">
-                  <?php
-                  global $modal_login_settings;
-                  if ($processpress['login_redirect'] == 2) {
-                    $login_redirect = wp_login_url(home_url());
-                  } elseif ($processpress['login_redirect'] == 3) {
-                    $login_redirect = wp_login_url(get_permalink());
-                  } else {
-                    $login_redirect = wp_login_url();
-                  }
-                  ?>
-                  <?php if (!is_user_logged_in()) { ?>
-                    <?php if(isset($modal_login_settings['add_to_user_menu'])) { ?>
-                      <li><?php add_modal_login_link(); ?></li>
-                    <?php } else { ?>
-                      <li><a href="<?php echo $login_redirect; ?>"><?php _e('Login', 'processpress' ); ?></a></li>
-                    <?php } ?>
-                  <?php } elseif (is_user_logged_in()) { ?>
-                    <?php if (!$processpress['prevent_admin_access']) { ?>
-                      <li>
-                        <a href="<?php echo site_url('wp-admin/'); ?>"><?php _e('Admin', 'processpress' ); ?></a>
-                      </li>
-                     <?php } ?>
-                    <li>
-                      <a href="<?php echo get_permalink($processpress['user_profile_page']); ?>"><?php _e('Profile', 'processpress' ); ?></a>
-                    </li>
-                    <li>
-                      <a href="<?php echo wp_logout_url( home_url() ); ?>"><?php _e('Logout', 'processpress' ); ?></a>
-                    </li>
-                  <?php } ?>
-              </ul>
-            <?php } ?>
-
+  <div class="uk-modal-dialog uk-background-secondary uk-light">
+    <nav id="navbar" class="uk-navbar-container uk-light uk-navbar-transparent">
+      <div class="uk-container">
+        <div data-uk-navbar>
+          <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" href="<?php echo home_url(); ?>">
+              <?php if (get_field('logo', 'option')) { ?>
+                <img src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>">
+              <?php } else { ?>
+                <?php bloginfo('name'); ?>
+              <?php } ?>
+            </a>
           </div>
-
+          <div class="uk-navbar-right">
+            <a class="uk-navbar-toggle uk-modal-close-full uk-padding-remove uk-background-secondary">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px">
+                  <path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M2.150,0.905 L0.566,2.507 L3.428,5.405 L0.548,8.339 L2.132,9.941 L4.994,7.007 L7.874,9.941 L9.422,8.339 L6.578,5.405 L9.404,2.507 L7.856,0.905 L4.994,3.839 L2.150,0.905 Z"/>
+                </svg>
+                Close
+              </span>
+            </a>
+          </div>
         </div>
-
+      </div>
+    </nav>
+    <div data-uk-height-viewport>
+      <div class="uk-container uk-container-small">
+        <?php
+          if (has_nav_menu('mobile_navigation')) :
+            wp_nav_menu(array('theme_location' => 'mobile_navigation', 'menu_class' => 'uk-nav uk-nav-primary uk-nav-center uk-margin-medium-top first', 'depth' => 1));
+          endif;
+        ?>
+      </div>
     </div>
+  </div>
 </div>

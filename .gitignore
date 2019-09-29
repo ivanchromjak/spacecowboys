@@ -44,10 +44,8 @@ node_modules
 nbproject
 sftpCache.json
 .ftppass
-public/js
-public/css
-admin/js
-admin/css
+assets/js
+assets/css
 
 # Composer
 includes/composer
